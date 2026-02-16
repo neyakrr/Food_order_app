@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 300px;
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+form {
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5b86e5;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #3f6fd1;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Admin Dashboard</h2>
+
+    <form action="view.jsp">
+        <input type="submit" value="View">
+    </form>
+
+    <form action="Bill.jsp">
+        <input type="submit" value="Generate Bill">
+    </form>
+     <form action="qr_tables.jsp">
+        <input type="submit" value="Table QRs">
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Page</title>
+
+<script>
+window.onload = function() {
+
+    // Get table number from QR URL
+    const params = new URLSearchParams(window.location.search);
+    const tableNumber = params.get("table");
+
+    if (tableNumber) {
+
+        // Set hidden field value
+        document.getElementById("tableNumber").value = tableNumber;
+
+    } else {
+        alert("Invalid QR Code. Table number missing.");
+    }
+};
+</script>
+
+</head>
+<body>
+
+<h2>User Registration</h2>
+
+<form action="loginServlet" method="post">
+
+    <!-- Hidden Table Field -->
+    <input type="hidden" id="tableNumber" name="tableNumber">
+
+    Username: <input type="text" name="Username"><br><br>
+    Email ID: <input type="text" name="emailnumber"><br><br>
+    Phone Number: <input type="text" name="phoneNumber"><br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
